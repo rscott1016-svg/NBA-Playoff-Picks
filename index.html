@@ -11,56 +11,72 @@
                 display: flex; 
                 flex-direction: column; 
                 align-items: center; 
-                justify-content: flex-start; 
-                height: 100vh; 
                 margin: 0; 
-                padding-top: 50px;
+                padding: 60px 20px;
             }
-            .icon { font-size: 80px; margin-bottom: 10px; }
-            .container { width: 90%; max-width: 500px; text-align: left; }
-            h1 { 
-                font-size: 1.2rem; 
+            /* Black and White Cartoon Style Icon */
+            .header-icon {
+                width: 80px;
+                height: 80px;
+                background-color: black;
+                -webkit-mask: url('https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/basketball.svg') no-repeat center;
+                mask: url('https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/basketball.svg') no-repeat center;
+                margin-bottom: 30px;
+            }
+            .container { width: 100%; max-width: 500px; text-align: left; }
+            .section-label { 
+                font-size: 0.9rem; 
                 text-transform: uppercase; 
-                letter-spacing: 1px; 
-                margin-bottom: 5px; 
-                color: #555;
+                letter-spacing: 2px; 
+                margin-bottom: 8px; 
+                color: #888;
+                font-weight: 700;
             }
-            .bet { 
-                font-size: 2.5rem; 
-                font-weight: 700; 
+            .bet-title { 
+                font-size: 2.2rem; 
+                font-weight: 800; 
                 margin-bottom: 20px; 
-                border-bottom: 4px solid black;
+                border-bottom: 5px solid black;
                 display: inline-block;
+                line-height: 1.1;
             }
-            ul { 
-                list-style-type: none; 
-                padding: 0; 
-                margin: 0;
+            .parlay-title {
+                color: #444;
+                border-bottom: 3px solid #ccc;
             }
+            ul { list-style-type: none; padding: 0; margin: 0 0 50px 0; }
             li { 
-                font-size: 1.2rem; 
-                margin-bottom: 15px; 
+                font-size: 1.1rem; 
+                margin-bottom: 12px; 
                 padding-left: 25px; 
                 position: relative;
                 line-height: 1.5;
             }
             li::before { 
-                content: "•"; 
+                content: "→"; 
                 position: absolute; 
                 left: 0; 
                 font-weight: bold; 
             }
+            hr { border: 0; border-top: 1px solid #eee; margin: 40px 0; width: 100%; }
         </style>
     </head>
     <body>
-        <div class="icon">⛹️‍♂️</div>
+        <div class="header-icon"></div>
+        
         <div class="container">
-            <h1>Lock of the Day:</h1>
-            <div class="bet">Golden State +5.5</div>
+            <div class="section-label">Lock of the Day</div>
+            <div class="bet-title">Golden State +5.5</div>
             <ul>
-                <li>72% of sharp money is tracking toward the Warriors at the current line.</li>
-                <li>Golden State is 18-13 Against the Spread (ATS) on the road over the last 2 months.</li>
-                <li>The Warriors are 4-1 ATS in their last 5 matchups following a double-digit loss.</li>
+                <li>72% of sharp money is tracking toward the Warriors at the current line.</li><li>Golden State is 18-13 Against the Spread (ATS) on the road over the last 2 months.</li><li>The Warriors are 4-1 ATS in their last 5 matchups following a double-digit loss.</li>
+            </ul>
+
+            <hr>
+
+            <div class="section-label">Long-Shot Parlay</div>
+            <div class="bet-title parlay-title">+850 Playoff Long-Shot</div>
+            <ul>
+                <li>Knicks Moneyline: MSG home court advantage in Game 1 is historically undervalued.</li><li>Brunson Over 28.5 Points: Hawks lack a primary point-of-attack defender.</li><li>Under 214.5 Total: Playoff whistles are tighter; pace slows down significantly.</li>
             </ul>
         </div>
     </body>
